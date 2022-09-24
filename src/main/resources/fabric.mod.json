@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "extramisc",
+  "version": "${version}",
+  "name": "Extra Misc",
+  "description": "This mod adds a variety of miscellaneous items such as blocks, weapons, tools, enchantments, machines.",
+  "authors": [
+    "algorithmslime"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/extramisc/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "com.algorithmslime.extramisc.ExtraMisc"
+      }
+    ]
+  },
+  "mixins": [
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17",
+    "fabric-language-kotlin": ">=1.8.3+kotlin.1.7.10"
+  }
+}
