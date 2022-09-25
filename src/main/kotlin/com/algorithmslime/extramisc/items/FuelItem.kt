@@ -1,6 +1,6 @@
 package com.algorithmslime.extramisc.items
 
 
-abstract class FuelItem : Item() {
+abstract class FuelItem : EMItem() {
     abstract fun getDuration(): Int
 }

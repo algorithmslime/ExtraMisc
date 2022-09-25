@@ -7,7 +7,7 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 
 class ItemManager {
-    private val items = listOf<com.algorithmslime.extramisc.items.Item>()
+    private val items = listOf<EMItem>()
     private val fuels = listOf<FuelItem>(TinyCoal())
 
     fun registerItems() {
@@ -16,22 +16,21 @@ class ItemManager {
         }
     }
 
+    private fun registerItem(item: Item, name: String): Item {
+        return Registry.register(Registry.ITEM, Identifier(Vars().MOD_ID, name), item)
+    }
+
     fun registerFuels() {
         for (fuel in this.fuels) {
-            this.registerFuel(fuel, fuel.getDuration())
+            this.registerFuel(fuel.getItem(), fuel.getName(), fuel.getDuration())
         }
     }
 
-    private fun registerItem(item: Item, name: String) {
-        Registry.register(Registry.ITEM, Identifier(Vars().MOD_ID, name), item)
-    }
-
-    private fun registerFuel(item: com.algorithmslime.extramisc.items.Item, duration: Int) {
+    private fun registerFuel(item: Item, name: String, duration: Int) {
         val registry: FuelRegistry = FuelRegistry.INSTANCE
 
         registry.add(
-            Registry.register(Registry.ITEM, Identifier(Vars().MOD_ID, item.getName()), item.getItem()),
-            duration
+            this.registerItem(item, name), duration
         )
     }
 }

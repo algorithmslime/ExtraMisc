@@ -2,7 +2,7 @@ package com.algorithmslime.extramisc.items
 
 import net.minecraft.item.Item
 
-abstract class Item {
+abstract class EMItem {
     /**
      * Get item
      */
