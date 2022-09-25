@@ -8,8 +8,8 @@
     "algorithmslime"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/algorithmslime/ExtraMisc",
+    "sources": "https://github.com/algorithmslime/ExtraMisc"
   },
   "license": "MIT",
   "icon": "assets/extramisc/icon.png",
@@ -30,5 +30,12 @@
     "minecraft": "~1.19",
     "java": ">=17",
     "fabric-language-kotlin": ">=1.8.3+kotlin.1.7.10"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "extramisc.discord": "https://example.com"
+      }
+    }
   }
 }
